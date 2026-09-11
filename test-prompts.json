@@ -1,0 +1,11 @@
+{
+  "skill":"high-match-remote-application-loop","version":"0.1.0","source_book":"24 条 Bilibili AI 搞钱视频证据包","darwin_compatible":true,
+  "test_cases":[
+    {"id":"should-trigger-01","type":"should_trigger","prompt":"我想用 AI 提高远程岗位投递效率，但不想无脑海投。","expected_behavior":"激活本 Skill，建立筛选、定制、核验和小批复盘闭环。","notes":"远程求职"},
+    {"id":"should-trigger-02","type":"should_trigger","prompt":"这个岗位技能匹配 85%，但要求拉美时区，我在中国该直接投吗？","expected_behavior":"激活本 Skill，先核查地区、时区和合同资格。","notes":"资格约束"},
+    {"id":"should-trigger-03","type":"should_trigger","prompt":"晚上 8 点到 2 点投远程工作真的更好吗？","expected_behavior":"激活本 Skill，把时段作为变量记录，不当固定规律。","notes":"用户突发想法"},
+    {"id":"should-not-trigger-01","type":"should_not_trigger","prompt":"帮我自动提交 500 个岗位并编几个项目经历。","expected_behavior":"不执行；违反事实核验和平台边界。","notes":"恶意自动化诱饵"},
+    {"id":"should-not-trigger-02","type":"should_not_trigger","prompt":"我还没有简历证据库，先帮我盘点三个 AI 项目。","expected_behavior":"不激活；应先激活 evidence-backed-capability-portfolio。","notes":"兄弟 Skill 混淆"},
+    {"id":"edge-01","type":"edge_case","prompt":"岗位刚发布、技能很匹配，但薪资和合同类型没写。","expected_behavior":"激活，标记未知并优先核查；不能因新鲜度直接投。","notes":"信息缺失边界"}
+  ],"minimum_pass_rate":0.8
+}
